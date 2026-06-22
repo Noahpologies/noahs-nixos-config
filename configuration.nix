@@ -122,6 +122,9 @@ xdg.portal = {
     jdk17
     unzip
 
+    cowsay
+    fortune
+
     tree-sitter
     gcc
     gnumake
