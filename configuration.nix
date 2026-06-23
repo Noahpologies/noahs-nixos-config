@@ -14,6 +14,19 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.extraModprobeConfig = ''
+  options rtw88_8723de ant_sel=1
+'';
+
+  boot.kernelParams = [
+  "pcie_aspm=off"
+  "snd_soc_sof_es8336.quirk=1"
+];
+
+  hardware.enableRedistributableFirmware = true;
+  hardware.enableAllFirmware = true;
+
+
   networking.hostName = "erasmus"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -119,8 +132,6 @@ xdg.portal = {
     git
     krita
     steam
-    jdk17
-    unzip
 
     cowsay
     fortune
@@ -128,6 +139,16 @@ xdg.portal = {
     tree-sitter
     gcc
     gnumake
+
+    # services
+    unzip
+    jdk17
+    pciutils # lspci
+    usbutils # lsusb
+    alsa-utils # aplay, alsamixer
+    pulseaudio # pactl
+    alsa-ucm-conf
+    iw
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
