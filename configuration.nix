@@ -132,6 +132,8 @@ xdg.portal = {
     git
     krita
     steam
+    libreoffice
+    texstudio
 
     cowsay
     fortune
@@ -140,7 +142,10 @@ xdg.portal = {
     gcc
     gnumake
 
+    gnomeExtensions.burn-my-windows
+
     # services
+    texlive.combined.scheme-full
     unzip
     jdk17
     pciutils # lspci
