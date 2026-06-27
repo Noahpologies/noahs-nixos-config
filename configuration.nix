@@ -14,18 +14,26 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.extraModprobeConfig = ''
-  options rtw88_8723de ant_sel=1
-'';
-
   boot.kernelParams = [
-  "pcie_aspm=off"
-  "snd_soc_sof_es8336.quirk=1"
-];
+    "pcie_aspm=off"
+  ];
+
+  boot.extraModprobeConfig = ''
+    options rtw88_8723de ant_sel=1
+    options snd_soc_sof_es8336 quirk=0x41
+  '';
 
   hardware.enableRedistributableFirmware = true;
-  hardware.enableAllFirmware = true;
 
+  services.udev.extraRules = ''
+    SUBSYSTEM=="sound", ACTION=="change", KERNEL=="card0", \
+    RUN+="${pkgs.alsa-utils}/bin/amixer -c 0 set 'Left Headphone Mixer Left DAC' on", \
+    RUN+="${pkgs.alsa-utils}/bin/amixer -c 0 set 'Right Headphone Mixer Right DAC' on"
+  '';
+
+  services.pipewire.wireplumber.extraConfig."51-default-sink" = {
+    "default.configured-audio-sink" = "alsa_output.pci-0000_00_0e.0-platform-sof-essx8336.HiFi__Speaker__sink";
+  };
 
   networking.hostName = "erasmus"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
