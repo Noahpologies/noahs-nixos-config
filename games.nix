@@ -4,7 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     steam
-    # prismlauncher at some point
+    prismlauncher
     # probably more things eventually
   ];
 

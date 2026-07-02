@@ -6,8 +6,19 @@
   environment.systemPackages = with pkgs; [
     neovim
     fastfetch
+
+    # random fun stuff
     cowsay
+    ponysay
     fortune
+    lolcat
+    figlet
+    sl
+    unimatrix
+    asciiquarium
+    bsdgames
+    hollywood
+
   ];
 
 }

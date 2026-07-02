@@ -46,6 +46,7 @@ xdg.portal = {
     krita
     kdePackages.konversation
     kdePackages.kate
+    kdePackages.bluedevil
 
     gnomeExtensions.burn-my-windows
   ];
