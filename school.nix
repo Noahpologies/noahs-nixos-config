@@ -5,8 +5,13 @@
 {
 
   environment.systemPackages = with pkgs; [
+    #LaTeX
     texlive.combined.scheme-medium
+    texlivePackages.aastex # AAVSO LaTeX packages
     texstudio
+
+    
+
     libreoffice
 
     # VStar
