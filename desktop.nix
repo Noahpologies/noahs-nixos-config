@@ -43,6 +43,9 @@ xdg.portal = {
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
+    #I have no clue where else home manager should go tbh
+    home-manager
+
     krita
     kdePackages.konversation
     kdePackages.kate
