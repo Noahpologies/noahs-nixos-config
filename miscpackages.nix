@@ -8,6 +8,7 @@
     fastfetch
 
     # random fun stuff
+    tree
     cowsay
     ponysay
     fortune
