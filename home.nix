@@ -19,6 +19,7 @@
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#erasmus";
       rebuild-upgrade = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch --flake /etc/nixos#eramsus";
+      switcheroo = "cd /etc/nixos && sudo nvim /etc/nixos/dotfiles/selector.nix";
     };
   };
 

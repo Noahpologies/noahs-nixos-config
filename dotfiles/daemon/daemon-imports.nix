@@ -6,32 +6,32 @@
 
  xdg.dataFile = {
     "plasma/desktoptheme/daemon" = {
-      source = ./dotfiles/daemon/plasma-styles;
+      source = ./plasma-styles;
       recursive = true;
     };
     "color-schemes" = {
-      source = ./dotfiles/daemon/colors;
+      source = ./colors;
       recursive = true;
     };
     "aurorae/themes/daemon" = {
-      source = ./dotfiles/daemon/window-borders;
+      source = ./window-borders;
       recursive = true;
     };
     "icons/Daemon" = {
-      source = ./dotfiles/daemon/icons/Daemon;
+      source = ./icons/Daemon;
       recursive = true;
     };
   };
 
   xdg.configFile."Kvantum" = {
-    source = ./dotfiles/daemon/kvantum-themes;
+    source = ./kvantum-themes;
     recursive = true;
   };
 
   home.file.".config/BetterDiscord/themes" = {
-    source = ./dotfiles/daemon/discord;
+    source = ./discord;
     recursive = true;
   };
 
-  programs.plasma.workspace.wallpaper = ./dotfiles/daemon/wallpaper/Editedcyberwall.png;
+  programs.plasma.workspace.wallpaper = ./wallpaper/Editedcyberwall.png;
 }
