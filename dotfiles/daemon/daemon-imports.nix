@@ -1,10 +1,9 @@
-# Selector: uncomment the desired config. Only have the one right now but the point is INFRASTRUCTURE!
+# Daemon imports
 
 { lib, pkgs, ... }:
 
- {
-
-xdg.dataFile = {
+    {
+    xdg.dataFile = {
     "plasma/desktoptheme/daemon" = {
       source = ./plasma-styles;
       recursive = true;
@@ -22,13 +21,13 @@ xdg.dataFile = {
       recursive = true;
     };
 
-    # Global theme (System Settings > Global Theme > "Daemon 1")
-    "plasma/look-and-feel/org.kde.plasma.daemon" = {
-      source = ./global-theme/org.kde.plasma.daemon;
-      recursive = true;
-    };
+    # Global theme
+#    "plasma/look-and-feel/org.kde.plasma.daemon" = {
+#      source = ./global-theme/org.kde.plasma.daemon;
+#      recursive = true;
+#    };
 
-    # Splash screen (System Settings > Splash Screen > "Daemon")
+    # Splash screen
     "plasma/look-and-feel/Daemon" = {
       source = ./splash-screen/Daemon;
       recursive = true;
@@ -51,10 +50,10 @@ xdg.dataFile = {
     recursive = true;
   };
 
-  home.file.".config/BetterDiscord/themes" = {
-    source = ./discord;
-    recursive = true;
-  };
+#  home.file.".config/BetterDiscord/themes" = {
+#    source = ./discord;
+#    recursive = true;
+#  };
 
   # Font
   home.file.".local/share/fonts/Prototype.ttf".source = ./fonts/Prototype.ttf;
@@ -69,9 +68,10 @@ xdg.dataFile = {
     enable = true;
 
     workspace = {
-      wallpaper = ./wallpapers/Editedcyberwall.png; # was pointing at a nonexistent "./wallpaper/" dir
+      wallpaper = ./wallpapers/Editedcyberwall.png;
       lookAndFeel = "org.kde.plasma.daemon";
       splashScreen = "Daemon";
       cursor.theme = "Bibata-Original-Classic";
     };
   };
+}
