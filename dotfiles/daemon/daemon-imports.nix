@@ -34,5 +34,5 @@
   };
 
   programs.plasma.enable = true;
-  programs.plasma.workspace.wallpaper = ./wallpaper/Editedcyberwall.png;
+  programs.plasma.workspace.wallpaper = ./wallpapers/Editedcyberwall.png;
 }
