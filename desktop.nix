@@ -52,7 +52,7 @@ xdg.portal = {
     kdePackages.bluedevil
     qbittorrent
 
-    gnomeExtensions.burn-my-windows
+    #gnomeExtensions.burn-my-windows
   ];
 
 }

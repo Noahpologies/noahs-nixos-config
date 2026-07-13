@@ -1,0 +1,14 @@
+{
+  "KPackageStructure": "Plasma/LookAndFeel",
+  "KPlugin": {
+    "Authors": [{ "Name": "Mathis Paquet", "Email": "mathispaquet362@gmail.com" }],
+    "Category": "Plasma Look And Feel",
+    "Description": "Cyberpunk theme",
+    "EnabledByDefault": true,
+    "Id": "org.kde.plasma.daemon",
+    "License": "LGPL 2.1+",
+    "Name": "Daemon 1",
+    "ServiceTypes": ["Plasma/LookAndFeel"],
+    "Version": "0.1"
+  }
+}

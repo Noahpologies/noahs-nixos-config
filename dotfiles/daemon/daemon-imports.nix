@@ -1,10 +1,10 @@
- # Daemon Imports
+# Selector: uncomment the desired config. Only have the one right now but the point is INFRASTRUCTURE!
 
- { lib, pkgs, ... }:
+{ lib, pkgs, ... }:
 
  {
 
- xdg.dataFile = {
+xdg.dataFile = {
     "plasma/desktoptheme/daemon" = {
       source = ./plasma-styles;
       recursive = true;
@@ -21,6 +21,29 @@
       source = ./icons/Daemon;
       recursive = true;
     };
+
+    # Global theme (System Settings > Global Theme > "Daemon 1")
+    "plasma/look-and-feel/org.kde.plasma.daemon" = {
+      source = ./global-theme/org.kde.plasma.daemon;
+      recursive = true;
+    };
+
+    # Splash screen (System Settings > Splash Screen > "Daemon")
+    "plasma/look-and-feel/Daemon" = {
+      source = ./splash-screen/Daemon;
+      recursive = true;
+    };
+
+    # Konsole color scheme
+    "konsole" = {
+      source = ./konsole-colors;
+      recursive = true;
+    };
+
+    "org.kde.syntax-highlighting/theme" = {
+      source = ./kate-colors;
+      recursive = true;
+    };
   };
 
   xdg.configFile."Kvantum" = {
@@ -33,6 +56,22 @@
     recursive = true;
   };
 
-  programs.plasma.enable = true;
-  programs.plasma.workspace.wallpaper = ./wallpapers/Editedcyberwall.png;
-}
+  # Font
+  home.file.".local/share/fonts/Prototype.ttf".source = ./fonts/Prototype.ttf;
+  fonts.fontconfig.enable = true;
+
+  # Cursor theme
+  home.packages = with pkgs; [
+    bibata-cursors
+  ];
+
+  programs.plasma = {
+    enable = true;
+
+    workspace = {
+      wallpaper = ./wallpapers/Editedcyberwall.png; # was pointing at a nonexistent "./wallpaper/" dir
+      lookAndFeel = "org.kde.plasma.daemon";
+      splashScreen = "Daemon";
+      cursor.theme = "Bibata-Original-Classic";
+    };
+  };
