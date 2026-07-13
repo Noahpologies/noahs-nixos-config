@@ -33,5 +33,6 @@
     recursive = true;
   };
 
+  programs.plasma.enable = true;
   programs.plasma.workspace.wallpaper = ./wallpaper/Editedcyberwall.png;
 }

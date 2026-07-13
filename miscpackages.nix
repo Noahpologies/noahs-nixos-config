@@ -18,7 +18,9 @@
     unimatrix
     asciiquarium
     bsdgames
-    hollywood
+    
+    # breaks randomly when it runs, probably just too cpu intensive for my little machine.
+    #hollywood
 
   ];
 
