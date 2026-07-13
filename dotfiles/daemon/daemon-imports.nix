@@ -70,7 +70,7 @@
     workspace = {
       wallpaper = ./wallpapers/Editedcyberwall.png;
       lookAndFeel = "org.kde.plasma.daemon";
-      splashScreen = "Daemon";
+      splashScreen = { theme = "Daemon"; };
       cursor.theme = "Bibata-Original-Classic";
     };
   };
