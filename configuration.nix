@@ -13,6 +13,7 @@
       ./miscpackages.nix
       ./games.nix
       ./school.nix
+      ./programs.nix
 
     ];
   

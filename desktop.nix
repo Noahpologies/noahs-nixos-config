@@ -46,12 +46,6 @@ xdg.portal = {
     #I have no clue where else home manager should go tbh
     home-manager
 
-    krita
-    kdePackages.konversation
-    kdePackages.kate
-    kdePackages.bluedevil
-    qbittorrent
-
     #gnomeExtensions.burn-my-windows
   ];
 
