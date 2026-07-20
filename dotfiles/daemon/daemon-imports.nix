@@ -45,11 +45,11 @@
     bibata-cursors
   ];
 
-  qt = {
-    enable = true;
-    platformTheme.name = "kde";
-    style.name = "kvantum";
-  };
+#  qt = {
+#    enable = true;
+#    platformTheme.name = "kde";
+#    style.name = "kvantum";
+#  };
 
   programs.plasma = {
     enable = true;
