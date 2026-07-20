@@ -21,12 +21,6 @@
       recursive = true;
     };
 
-    # Global theme
-#    "plasma/look-and-feel/org.kde.plasma.daemon" = {
-#      source = ./global-theme/org.kde.plasma.daemon;
-#      recursive = true;
-#    };
-
     # Splash screen
     "plasma/look-and-feel/Daemon" = {
       source = ./splash-screen/Daemon;
