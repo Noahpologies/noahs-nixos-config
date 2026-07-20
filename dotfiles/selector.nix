@@ -4,7 +4,7 @@
 {
   imports = [
   ./daemon/daemon-imports.nix
-  # ./future-config-imports.nix
+  # ./vanilla/vanilla-imports.nix
   # ./another-config-imports.nix
   ];
 }
