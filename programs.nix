@@ -8,12 +8,7 @@
 
   environment.systemPackages = with pkgs; [
 
-  # KDE apps
   krita
-  kdePackages.kate
-  kdePackages.konversation
-  kdePackages.bluedevil
-  
   qbittorrent
 
   ];

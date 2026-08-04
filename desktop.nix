@@ -1,26 +1,23 @@
-# KDE stuff, X11, sound, etc. I've also put in some GUI apps that don't fit elsewhere.
+# X11 fallback, audio, portals, display manager. Hyprland keybinds/animations live in home/hyprland.nix.
 
 { config, pkgs, ... }:
 
 {
 
-  # Enable X11
   services.xserver.enable = true;
 
-  # Enable the Kool Desktop Environment
   services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
 
-  # Configure keymap in X11
+# ENABLE HYPRLAND!
+  programs.hyprland.enable = true;
+
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
 
-  # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -30,23 +27,21 @@
     pulse.enable = true;
   };
 
-# make google meet work
-xdg.portal = {
-  enable = true;
-  extraPortals = with pkgs; [
-    xdg-desktop-portal-gtk
-  ];
-};
+  security.polkit.enable = true;
 
-# GUI and desktop apps
+  # make google meet / screen share work under Hyprland
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
+    ];
+  };
 
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
-    #I have no clue where else home manager should go tbh
     home-manager
-
-    #gnomeExtensions.burn-my-windows
   ];
 
 }

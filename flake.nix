@@ -8,14 +8,9 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }:
     {
       nixosConfigurations.erasmus = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -27,7 +22,6 @@
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
             home-manager.users.noah = import ./home.nix;
-            home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
           }
         ];
       };

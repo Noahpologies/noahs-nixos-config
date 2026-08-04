@@ -1,0 +1,54 @@
+{ pkgs, ... }:
+{
+  wayland.windowManager.hyprland = {
+    enable = true;
+
+    settings = {
+      monitor = ",preferred,auto,1";
+
+      "$mod" = "SUPER";
+      "$terminal" = "kitty";
+
+      exec-once = [
+        "waybar"
+        "mako"
+        "hyprpaper"
+        "polkit_gnome"
+      ];
+
+      bind = [
+        "$mod, Q, exec, $terminal"
+        "$mod, C, killactive"
+        "$mod, M, exit"
+        "$mod, V, togglefloating"
+        "$mod, R, exec, wofi --show drun"
+        "$mod, P, pseudo"
+        "$mod, J, togglesplit"
+
+        "$mod, 1, workspace, 1"
+        "$mod, 2, workspace, 2"
+        "$mod, 3, workspace, 3"
+        "$mod, 4, workspace, 4"
+        "$mod, 5, workspace, 5"
+
+        "$mod SHIFT, 1, movetoworkspace, 1"
+        "$mod SHIFT, 2, movetoworkspace, 2"
+        "$mod SHIFT, 3, movetoworkspace, 3"
+        "$mod SHIFT, 4, movetoworkspace, 4"
+        "$mod SHIFT, 5, movetoworkspace, 5"
+      ];
+
+      animations = {
+        enabled = true;
+        bezier = [ "myBezier, 0.05, 0.9, 0.1, 1.05" ];
+        animation = [
+          "windows, 1, 7, myBezier"
+          "windowsOut, 1, 7, default, popin 80%"
+          "border, 1, 10, default"
+          "fade, 1, 7, default"
+          "workspaces, 1, 6, default"
+        ];
+      };
+    };
+  };
+}

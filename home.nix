@@ -1,11 +1,20 @@
 # home.nix
 { lib, pkgs, ... }:
 {
-  imports = [ ./dotfiles/selector.nix ];
+  imports = [
+    ./home/hyprland.nix
+    ./home/waybar.nix
+    ./home/wofi.nix
+    ./home/mako.nix
+    ./home/kitty.nix
+  ];
 
   home = {
     packages = with pkgs; [
       hello
+      hyprpaper
+      hyprlock
+      polkit_gnome
     ];
 
     username = "noah";
@@ -19,7 +28,6 @@
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#erasmus";
       rebuild-upgrade = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch --flake /etc/nixos#erasmus";
-      switcheroo = "cd /etc/nixos && sudo nvim /etc/nixos/dotfiles/selector.nix";
     };
   };
 
