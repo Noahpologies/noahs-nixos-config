@@ -18,7 +18,7 @@
     enable = true;
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#erasmus";
-      rebuild-upgrade = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch --flake /etc/nixos#eramsus";
+      rebuild-upgrade = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch --flake /etc/nixos#erasmus";
       switcheroo = "cd /etc/nixos && sudo nvim /etc/nixos/dotfiles/selector.nix";
     };
   };
