@@ -3,6 +3,8 @@
   wayland.windowManager.hyprland = {
     enable = true;
     configType = "hyprlang";
+    systemd.variables = [ "--all" ];
+
 
     settings = {
       monitor = ",preferred,auto,1";
@@ -13,6 +15,7 @@
       exec-once = [
         "waybar"
         "mako"
+	"swaybg -i /etc/nixos/home/assets/c4-spring-sakura-sky.jpg"
         "polkit_gnome"
 	"nm-applet"
 	"blueman-applet"
