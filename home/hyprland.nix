@@ -13,7 +13,6 @@
       exec-once = [
         "waybar"
         "mako"
-        "hyprpaper"
         "polkit_gnome"
 	"nm-applet"
 	"blueman-applet"

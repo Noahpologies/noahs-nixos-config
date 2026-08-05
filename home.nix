@@ -7,6 +7,7 @@
     ./home/mako.nix
     ./home/kitty.nix
     ./home/cursor.nix
+    ./home/wallpaper.nix
   ];
 
   home = {

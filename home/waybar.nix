@@ -17,21 +17,21 @@
         modules-right = [ "pulseaudio" "network" "battery" "tray" ];
 
         network = {
-          format-wifi = "\uf1eb {essid} ({signalStrength}%)";
-          format-ethernet = "\uf0e4 Wired";
-          format-disconnected = "\uf1eb Disconnected";
+          format-wifi = "  {essid} ({signalStrength}%)";
+          format-ethernet = " f0e4 Wired";
+          format-disconnected = "  Disconnected";
           tooltip-format = "{ifname} via {gwaddr}";
         };
 
         battery = {
           format = "{icon} {capacity}%";
-          format-icons = [ "\uf244" "\uf243" "\uf242" "\uf241" "\uf240" ];
+          format-icons = [ " " " " " " " " " " ];
         };
 
         pulseaudio = {
           format = "{icon} {volume}%";
-          format-icons = { default = [ "\uf026" "\uf027" "\uf028" ]; };
-          format-muted = "\uf6a9 Muted";
+          format-icons = { default = [ " " " " " " ]; };
+          format-muted = "x Muted";
         };
 
         clock = {
