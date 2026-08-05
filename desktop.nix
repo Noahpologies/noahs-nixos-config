@@ -6,7 +6,7 @@
   # sddm
   services.displayManager.sddm.enable = true;
   services.displayManager.sessionPackages = [ pkgs.hyprland ];
-  services.displayManager.sddm.theme = "catppuccin-mocha";
+  services.displayManager.sddm.theme = "catppuccin-mocha-mauve";
 
   # ENABLE HYPRLAND!
   programs.hyprland = {

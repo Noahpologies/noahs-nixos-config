@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.symbols-only
+  ];
 
   programs.waybar = {
     enable = true;
@@ -7,26 +11,27 @@
       mainBar = {
         layer = "top";
         position = "top";
-        height = 30;
+        height = 46;
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
         modules-right = [ "pulseaudio" "network" "battery" "tray" ];
 
         network = {
-          format-wifi = "  {essid} ({signalStrength}%)";
-          format-disconnected = "󰤮 Disconnected";
+          format-wifi = "\uf1eb {essid} ({signalStrength}%)";
+          format-ethernet = "\uf0e4 Wired";
+          format-disconnected = "\uf1eb Disconnected";
           tooltip-format = "{ifname} via {gwaddr}";
         };
 
         battery = {
           format = "{icon} {capacity}%";
-          format-icons = [ "" "" "" "" "" ];
+          format-icons = [ "\uf244" "\uf243" "\uf242" "\uf241" "\uf240" ];
         };
 
         pulseaudio = {
           format = "{icon} {volume}%";
-          format-icons = { default = [ "" "" "" ]; };
-          format-muted = "󰝟 Muted";
+          format-icons = { default = [ "\uf026" "\uf027" "\uf028" ]; };
+          format-muted = "\uf6a9 Muted";
         };
 
         clock = {
