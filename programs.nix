@@ -10,6 +10,7 @@
 
   krita
   qbittorrent
+  dolphin
 
   ];
 

@@ -9,7 +9,10 @@
   services.displayManager.sddm.enable = true;
 
 # ENABLE HYPRLAND!
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = false;
+  };
 
   services.xserver.xkb = {
     layout = "us";

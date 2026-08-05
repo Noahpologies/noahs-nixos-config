@@ -10,6 +10,27 @@
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
         modules-right = [ "pulseaudio" "network" "battery" "tray" ];
+
+        network = {
+          format-wifi = "  {essid} ({signalStrength}%)";
+          format-disconnected = "󰤮 Disconnected";
+          tooltip-format = "{ifname} via {gwaddr}";
+        };
+
+        battery = {
+          format = "{icon} {capacity}%";
+          format-icons = [ "" "" "" "" "" ];
+        };
+
+        pulseaudio = {
+          format = "{icon} {volume}%";
+          format-icons = { default = [ "" "" "" ]; };
+          format-muted = "󰝟 Muted";
+         };
+
+        clock = {
+          format = "{:%H:%M   %a %d %b}";
+        };
       };
     };
     style = ''

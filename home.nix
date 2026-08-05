@@ -1,4 +1,3 @@
-# home.nix
 { lib, pkgs, ... }:
 {
   imports = [
@@ -7,6 +6,7 @@
     ./home/wofi.nix
     ./home/mako.nix
     ./home/kitty.nix
+    ./home/cursor.nix
   ];
 
   home = {
@@ -19,8 +19,15 @@
 
     username = "noah";
     homeDirectory = "/home/noah";
-
     stateVersion = "26.05";
+  };
+
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Papirus";
+      package = pkgs.papirus-icon-theme;
+    };
   };
 
   programs.bash = {
@@ -30,5 +37,4 @@
       rebuild-upgrade = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch --flake /etc/nixos#erasmus";
     };
   };
-
- }
+}

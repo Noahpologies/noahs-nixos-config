@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     neovim
     fastfetch
+    gvfs
 
     # random fun stuff
     tree
