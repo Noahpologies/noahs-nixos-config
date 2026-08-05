@@ -79,15 +79,29 @@
         ];
       };
 
+      decoration = {
+        blur = {
+	  enabled = true;
+	  size = 6;
+	  passes = 3;
+	};
+      };
+
       # make waypaper less egregious
-      windowrule = [
+     windowrule = [
       {
         name = "waypaper-float";
         "match:class" = "^(waypaper)$";
         float = true;
         center = true;
         size = "1000 700";
-        opacity = "0.75";
+        opacity = "0.90";
+      }
+
+      { # make VStar prettier
+        name = "vstar";
+        "match:class" = "^(org-aavso-tools-vstar-ui-VStar)$";
+        opacity = "0.92 0.92";
         }
       ];
     };
