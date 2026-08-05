@@ -39,7 +39,6 @@
         };
       };
     };
-
     style = ''
       * {
         font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono";
@@ -52,7 +51,7 @@
 
       #waybar > box > box {
         background-color: #1e1e2e;
-        border: 2px solid #89b4fa;
+        border: 4px solid #f5c2e7;
         border-radius: 12px;
         padding: 0 10px;
         margin: 4px 6px;
@@ -61,6 +60,10 @@
       #workspaces, #clock, #pulseaudio, #network, #battery, #tray {
         padding: 0 6px;
         color: #cdd6f4;
+      }
+
+       #workspaces button.active {
+        color: #f5c2e7;
       }
     '';
   };
