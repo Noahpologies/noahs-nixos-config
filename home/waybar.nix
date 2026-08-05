@@ -1,8 +1,5 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
 
   programs.waybar = {
     enable = true;
@@ -40,7 +37,7 @@
 
     style = ''
       * {
-        font-family: "JetBrainsMono Nerd Font";
+        font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono";
         font-size: 13px;
       }
 

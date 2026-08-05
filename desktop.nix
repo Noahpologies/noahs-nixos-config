@@ -1,15 +1,14 @@
 # X11 fallback, audio, portals, display manager. Hyprland keybinds/animations live in home/hyprland.nix.
-
 { config, pkgs, ... }:
-
 {
-
   services.xserver.enable = true;
 
+  # sddm
   services.displayManager.sddm.enable = true;
   services.displayManager.sessionPackages = [ pkgs.hyprland ];
+  services.displayManager.sddm.theme = "catppuccin-mocha";
 
-# ENABLE HYPRLAND!
+  # ENABLE HYPRLAND!
   programs.hyprland = {
     enable = true;
     withUWSM = false;
@@ -21,7 +20,6 @@
   };
 
   services.printing.enable = true;
-
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -46,6 +44,11 @@
 
   environment.systemPackages = with pkgs; [
     home-manager
+    (catppuccin-sddm.override {
+      flavor = "mocha";
+      font = "JetBrainsMono Nerd Font";
+      fontSize = "9";
+      loginBackground = true;
+    })
   ];
-
 }

@@ -15,9 +15,12 @@
       hyprpaper
       hyprlock
       polkit_gnome
-      nerd-fonts.jetbrains-mono
       networkmanagerapplet
       blueman
+
+      #fonts
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.symbols-only
     ];
 
     username = "noah";
