@@ -15,7 +15,7 @@
       exec-once = [
         "waybar"
         "mako"
-	"swaybg -i /etc/nixos/home/assets/c4-spring-sakura-sky.jpg"
+	"awww-daemon"
         "polkit_gnome"
 	"nm-applet"
 	"blueman-applet"
@@ -28,6 +28,7 @@
 	"$mod, F, exec, firefox"
 
 	# general
+	"$mod, W, exec, waypaper"
         "$mod, Q, exec, $terminal"
         "$mod, C, killactive"
         "$mod, M, exit"
@@ -35,7 +36,6 @@
         "$mod, R, exec, wofi --show drun"
         "$mod, P, pseudo"
         "$mod, J, layoutmsg, togglesplit"
-        
 	# workspaces
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"

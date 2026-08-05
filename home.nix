@@ -13,7 +13,6 @@
   home = {
     packages = with pkgs; [
       hello
-      hyprpaper
       hyprlock
       polkit_gnome
       networkmanagerapplet
