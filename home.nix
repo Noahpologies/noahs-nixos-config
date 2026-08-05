@@ -12,6 +12,10 @@
 
   home = {
     packages = with pkgs; [
+      kdePackages.okular
+      imv
+      mpv
+
       hello
       hyprlock
       polkit_gnome
@@ -36,6 +40,36 @@
       icon = "applications-science";
       terminal = false;
       categories = [ "Science" "Astronomy" ];
+    };
+
+# okular and imv for file opening
+    xdg.mimeApps = {
+      enable = true;
+
+      defaultApplications = {
+        # PDFs
+        "application/pdf" = "org.kde.okular.desktop";
+
+        # Images
+        "image/png" = "imv.desktop";
+        "image/jpeg" = "imv.desktop";
+        "image/gif" = "imv.desktop";
+        "image/webp" = "imv.desktop";
+
+       # Video
+        "video/mp4" = "mpv.desktop";
+        "video/webm" = "mpv.desktop";
+        "video/x-matroska" = "mpv.desktop";
+        "video/quicktime" = "mpv.desktop";
+
+        # Audio
+        "audio/mpeg" = "mpv.desktop";
+        "audio/ogg" = "mpv.desktop";
+        "audio/flac" = "mpv.desktop";
+        "audio/wav" = "mpv.desktop";
+        "audio/x-wav" = "mpv.desktop";
+        "audio/webm" = "mpv.desktop";
+	};
     };
 
   gtk = {
