@@ -17,6 +17,7 @@
       polkit_gnome
       networkmanagerapplet
       blueman
+     # starship
 
       #fonts
       nerd-fonts.jetbrains-mono
