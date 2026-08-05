@@ -55,7 +55,7 @@
 	"$mod, up, movefocus, u"
 	"$mod, down, movefocus, d"
 
-	# change windo position & size
+	# change window position & size
 	"$mod SHIFT, left, movewindow, l"
 	"$mod SHIFT, right, movewindow, r"
 	"$mod SHIFT, up, movewindow, u"
@@ -78,6 +78,18 @@
           "workspaces, 1, 6, default"
         ];
       };
+
+      # make waypaper less egregious
+      windowrule = [
+      {
+        name = "waypaper-float";
+        "match:class" = "^(waypaper)$";
+        float = true;
+        center = true;
+        size = "1000 700";
+        opacity = "0.75";
+        }
+      ];
     };
   };
 }

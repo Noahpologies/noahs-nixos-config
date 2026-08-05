@@ -5,15 +5,15 @@
   
   [
       ./hardware-configuration.nix
-      ./fixes.nix
-      ./hardware.nix
-      ./desktop.nix
-      ./users.nix
-      ./services.nix
-      ./miscpackages.nix
-      ./games.nix
-      ./school.nix
-      ./programs.nix
+      ./modules/fixes.nix
+      ./modules/hardware.nix
+      ./modules/desktop.nix
+      ./modules/users.nix
+      ./modules/services.nix
+      ./modules/miscpackages.nix
+      ./modules/games.nix
+      ./modules/school.nix
+      ./modules/programs.nix
 
     ];
   
