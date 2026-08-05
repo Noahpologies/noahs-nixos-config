@@ -10,7 +10,7 @@
 
   krita
   qbittorrent
-  dolphin
+  kdePackages.dolphin
 
   ];
 

@@ -7,6 +7,7 @@
   services.xserver.enable = true;
 
   services.displayManager.sddm.enable = true;
+  services.displayManager.sessionPackages = [ pkgs.hyprland ];
 
 # ENABLE HYPRLAND!
   programs.hyprland = {
