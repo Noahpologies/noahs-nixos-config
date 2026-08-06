@@ -98,12 +98,26 @@
         opacity = "0.90";
       }
 
-      { # make VStar prettier
+      { # make various apps prettier
         name = "vstar";
         "match:class" = "^(org-aavso-tools-vstar-ui-VStar)$";
         opacity = "0.92 0.92";
         }
+
+	{
+	  name = "okular";
+	  "match:class" = "^(org.kde.okular)$";
+	  opacity = "0.92 0.92";
+	  }
       ];
+
+	#get natural scrolling
+      input = {
+        natural_scroll = true;
+	touchpad = {
+	  natural_scroll = true;
+	};
+      };
     };
   };
 }

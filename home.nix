@@ -74,7 +74,7 @@
 
   gtk = {
     enable = true;
-    
+
     theme = {
       name = "Adwaita-dark";
       package = pkgs.gnome-themes-extra;
@@ -85,6 +85,21 @@
       package = pkgs.papirus-icon-theme;
     };
   };
+
+  qt = {
+    enable = true;
+
+    platformTheme.name = "kde";
+
+    style = {
+      name = "breeze";
+    };
+  };
+
+  xdg.configFile."kdeglobals".text = ''
+    [General]
+    ColorScheme=BreezeDark
+  '';
 
   programs.bash = {
     enable = true;
