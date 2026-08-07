@@ -77,8 +77,8 @@
     enable = true;
 
     theme = {
-      name = "Catpuccin-Mocha-Standard-Pink-Dark";
-      package = pkgs.catpuccin-gtk.override {
+      name = "Catppuccin-Mocha-Standard-Pink-Dark";
+      package = pkgs.catppuccin-gtk.override {
         accents = [ "pink" ];
 	size = "standard";
 	variant = "mocha";
@@ -108,6 +108,11 @@
 
   programs.bash = {
     enable = true;
+
+    initExtra = ''
+      unimatrix -ws 99 -c magenta -b && clear
+    '';
+
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#erasmus";
       rebuild-upgrade = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch --flake /etc/nixos#erasmus";

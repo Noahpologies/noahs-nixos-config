@@ -40,7 +40,7 @@
           format = "{icon} {volume}%";
           format-icons = { default = [ " " " " " " ]; };
           format-muted = "x Muted";
-	  on-click = "pwvucontrol"
+	  on-click = "pwvucontrol";
         };
 
         clock = {
