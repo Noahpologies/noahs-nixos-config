@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     nerd-fonts.symbols-only
+    pwvucontrol
   ];
 
   programs.waybar = {
@@ -24,14 +25,22 @@
         };
 
         battery = {
-          format = "{icon} {capacity}%";
-          format-icons = [ " " " " " " " " " " ];
-        };
+          states = {
+	    warning = 30;
+	    critical = 15;
+	  };
+	  format = "{icon} {capacity}%";
+          format-charging = " {capacity}%";
+          format-icons = {
+            default = [ " " " " " " " " " "];
+	    };
+	};
 
         pulseaudio = {
           format = "{icon} {volume}%";
           format-icons = { default = [ " " " " " " ]; };
           format-muted = "x Muted";
+	  on-click = "pwvucontrol"
         };
 
         clock = {

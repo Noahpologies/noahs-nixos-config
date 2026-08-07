@@ -8,6 +8,7 @@
     ./home/kitty.nix
     ./home/cursor.nix
     ./home/wallpaper.nix
+    ./home/neovim.nix
   ];
 
   home = {
@@ -76,8 +77,12 @@
     enable = true;
 
     theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
+      name = "Catpuccin-Mocha-Standard-Pink-Dark";
+      package = pkgs.catpuccin-gtk.override {
+        accents = [ "pink" ];
+	size = "standard";
+	variant = "mocha";
+	};
     };
 
     iconTheme = {

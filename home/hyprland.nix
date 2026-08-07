@@ -67,6 +67,12 @@
 	  "$mod, mouse:273, resizewindow"
 	];
 
+	bindel = [
+          ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
+          ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+          ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ];
+
       animations = {
         enabled = true;
         bezier = [ "myBezier, 0.05, 0.9, 0.1, 1.05" ];
