@@ -1,6 +1,7 @@
 { lib, pkgs, ... }:
 {
   imports = [
+    ./home/desktopentries.nix
     ./home/hyprland.nix
     ./home/waybar.nix
     ./home/wofi.nix
@@ -33,15 +34,6 @@
     homeDirectory = "/home/noah";
     stateVersion = "26.05";
   };
-
-    xdg.desktopEntries.vstar = {
-      name = "VStar";
-      comment = "AAVSO VStar";
-      exec = "vstar";
-      icon = "applications-science";
-      terminal = false;
-      categories = [ "Science" "Astronomy" ];
-    };
 
 # okular and imv for file opening
     xdg.mimeApps = {

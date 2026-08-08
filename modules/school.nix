@@ -14,7 +14,7 @@
 
     libreoffice
 
-    # VStar
+    # VStar setup
     (writeShellScriptBin "vstar" ''
     exec "$HOME/software/vstar/VStar.sh" "$@"
    '')

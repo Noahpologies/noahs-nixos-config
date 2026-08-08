@@ -26,6 +26,7 @@
 	"$mod, E, exec, dolphin"
 	"$mod, S, exec, steam"
 	"$mod, F, exec, firefox"
+	"$mod, o, exec, obsidian"
 
 	# general
 	"$mod, W, exec, waypaper"
