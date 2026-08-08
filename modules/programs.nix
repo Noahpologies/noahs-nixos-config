@@ -11,6 +11,7 @@
   krita
   qbittorrent
   kdePackages.dolphin
+  obsidian
 
   ];
 
