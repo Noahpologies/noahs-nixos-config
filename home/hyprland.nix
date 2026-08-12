@@ -37,6 +37,10 @@
         "$mod, R, exec, wofi --show drun"
         "$mod, P, pseudo"
         "$mod, J, layoutmsg, togglesplit"
+	"$mod, A, fullscreen, 0"
+	"$mod, F3, exec, brightnessctl set +5-%"
+	"$mod, F4, exec, brightnessctl set +5%"
+
 	# workspaces
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"

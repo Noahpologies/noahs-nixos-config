@@ -20,6 +20,7 @@
     gnumake
     git
     wget
+    brightnessctl
   ];
 
 }
