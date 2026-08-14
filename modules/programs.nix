@@ -10,8 +10,8 @@
 
   krita
   qbittorrent
-  kdePackages.dolphin
   obsidian
+  yazi
 
   ];
 
