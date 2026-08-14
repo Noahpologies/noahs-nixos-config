@@ -4,6 +4,7 @@
 
 {
   stylix.enable = true;
+  stylix.targets.qt.enable = false;
 
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
   stylix.polarity = "dark";
