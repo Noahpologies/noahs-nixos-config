@@ -8,26 +8,19 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    stylix = {
-      url = "github:nix-community/stylix/release-26.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-      };
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, ... }:
     {
       nixosConfigurations.erasmus = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-	specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
-	  stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-	    home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.noah = import ./home.nix;
           }
         ];

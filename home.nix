@@ -1,4 +1,4 @@
-{ inputs, lib, pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   imports = [
     ./home/desktopentries.nix
@@ -10,8 +10,6 @@
     ./home/cursor.nix
     ./home/wallpaper.nix
     ./home/neovim.nix
-    ./home/stylix.nix
-    inputs.stylix.homeModules.stylix
   ];
 
   home = {
