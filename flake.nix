@@ -14,10 +14,11 @@
       };
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }:
+  outputs = { self, nixpkgs, home-manager, stylix, ... } @ inputs:
     {
       nixosConfigurations.erasmus = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+	specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
 	  stylix.nixosModules.stylix
@@ -26,6 +27,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
+	    home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.noah = import ./home.nix;
           }
         ];

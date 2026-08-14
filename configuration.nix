@@ -34,6 +34,8 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  stylix.homeManagerIntegration.autoImport = false;
+
   # flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
