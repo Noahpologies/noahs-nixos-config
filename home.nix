@@ -10,6 +10,7 @@
     ./home/cursor.nix
     ./home/wallpaper.nix
     ./home/neovim.nix
+    ./home/stylix.nix
   ];
 
   home = {
