@@ -23,7 +23,7 @@
 
       bind = [
         #apps
-	"$mod, E, exec, dolphin"
+	"$mod, E, exec, kity -e yazi"
 	"$mod, S, exec, steam"
 	"$mod, F, exec, firefox"
 	"$mod, o, exec, obsidian"

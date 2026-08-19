@@ -12,6 +12,7 @@
   qbittorrent
   obsidian
   yazi
+  obs-studio
 
   ];
 

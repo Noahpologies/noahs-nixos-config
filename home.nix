@@ -102,7 +102,7 @@
     enable = true;
 
     initExtra = ''
-      unimatrix -ws 99 -c magenta -b && clear
+      unimatrix -ws 100 -c magenta -b && clear
     '';
 
     shellAliases = {

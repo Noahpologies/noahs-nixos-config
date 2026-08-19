@@ -7,6 +7,7 @@
   services.gvfs.enable = true;
 
   environment.systemPackages = with pkgs; [
+    ffmpeg
     unzip
     jdk17
     pciutils # lspci
