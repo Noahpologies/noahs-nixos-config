@@ -101,9 +101,9 @@
   programs.bash = {
     enable = true;
 
-    initExtra = ''
-      unimatrix -ws 100 -c magenta -b && clear
-    '';
+   # initExtra = ''
+    #  unimatrix -ws 100 -c magenta -b && clear
+   # '';
 
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#erasmus";
