@@ -51,4 +51,9 @@
       loginBackground = true;
     })
   ];
+
+  programs.bash.shellAliases = {
+  # I'm too lazy to fix my blueman applet
+  headphones = "bluetoothctl power on && bluetoothctl connect 80:A4:B5:DC:1E:EA"
+  };
 }
