@@ -8,6 +8,7 @@
 
   environment.systemPackages = with pkgs; [
 
+  localsend
   krita
   qbittorrent
   obsidian
