@@ -5,7 +5,6 @@
   
   [
       ./hardware-configuration.nix
-      ./modules/fixes.nix
       ./modules/hardware.nix
       ./modules/desktop.nix
       ./modules/users.nix
@@ -17,7 +16,7 @@
 
     ];
   
-  networking.hostName = "erasmus"; # Define your hostname.
+  networking.hostName = "delta"; # Define your hostname.
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/New_York";
