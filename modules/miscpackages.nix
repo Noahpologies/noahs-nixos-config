@@ -4,7 +4,6 @@
 {
 
   environment.systemPackages = with pkgs; [
-    neovim
     fastfetch
     hyfetch
     gvfs

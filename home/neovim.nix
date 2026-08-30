@@ -5,7 +5,12 @@
     enable = true;
     plugins = with pkgs.vimPlugins; [ catppuccin-nvim ];
     initLua = ''
-      require("catppuccin").setup({ flavour = "mocha" })
+      vim.o.termguicolors = true
+
+      require("catppuccin").setup({
+        flavour = "mocha",
+	transparent_background = true,
+      })
       vim.cmd.colorscheme "catppuccin"
     '';
   };

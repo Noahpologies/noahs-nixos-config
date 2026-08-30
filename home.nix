@@ -106,6 +106,7 @@
    # '';
 
     shellAliases = {
+      remind = "cat reminder.txt | cowsay";
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#erasmus";
       rebuild-upgrade = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch --flake /etc/nixos#erasmus";
     };
