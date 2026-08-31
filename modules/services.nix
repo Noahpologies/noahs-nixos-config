@@ -6,6 +6,13 @@
   services.udisks2.enable = true;
   services.gvfs.enable = true;
 
+  #fingerprint
+  services.fprintd.enable = true;
+  security.pam.services.login.fprintAuth = true;
+  security.pam.services.sudo.fprintAuth = true;
+  security.pam.services.sddm.fprintAuth = true;
+  security.pam.services.swaylock.fprintAuth = true;
+
   environment.systemPackages = with pkgs; [
     ffmpeg
     unzip
