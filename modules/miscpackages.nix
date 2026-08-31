@@ -9,6 +9,7 @@
     gvfs
 
     # random fun stuff
+    chameleos
     tree
     cowsay
     ponysay

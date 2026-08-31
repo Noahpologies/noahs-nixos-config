@@ -23,6 +23,7 @@
       polkit_gnome
       networkmanagerapplet
       blueman
+      libnotify
      # starship
 
       #fonts

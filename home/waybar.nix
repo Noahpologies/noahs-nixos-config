@@ -60,7 +60,7 @@
 
       #waybar > box > box {
         background-color: #1e1e2e;
-        border: 2px solid #f5c2e7;
+        border: 2px solid #ffffff;
         border-radius: 12px;
         padding: 0 10px;
         margin: 4px 6px;
