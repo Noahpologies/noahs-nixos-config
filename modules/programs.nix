@@ -8,6 +8,7 @@
 
   environment.systemPackages = with pkgs; [
 
+  discord
   localsend
   krita
   qbittorrent
