@@ -76,7 +76,7 @@
           ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 	  ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
           ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-	  ", XF84Calculator, exec, firefox ~/software/desmos-offline/desmos.html"
+	  ", XF86Calculator, exec, firefox ~/software/desmos-offline/desmos.html"
         ];
 
       animations = {
