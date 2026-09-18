@@ -8,6 +8,7 @@
 
   environment.systemPackages = with pkgs; [
 
+  blender
   discord
   localsend
   krita
