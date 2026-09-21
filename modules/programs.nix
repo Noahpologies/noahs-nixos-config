@@ -8,6 +8,7 @@
 
   environment.systemPackages = with pkgs; [
 
+  zotero
   blender
   discord
   localsend
