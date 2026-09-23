@@ -26,6 +26,7 @@
 	"$mod, S, exec, steam"
 	"$mod, F, exec, firefox"
 	"$mod, o, exec, obsidian"
+	"$mod, z, exec, zotero"
 	
 
 	# general

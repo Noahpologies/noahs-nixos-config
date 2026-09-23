@@ -8,6 +8,7 @@
 
   environment.systemPackages = with pkgs; [
 
+  cheese
   zotero
   blender
   discord

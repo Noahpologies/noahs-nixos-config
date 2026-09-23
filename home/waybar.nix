@@ -68,7 +68,7 @@
 
       #workspaces, #clock, #pulseaudio, #network, #battery, #tray {
         padding: 0 6px;
-        color: #cdd6f4;
+        color: #ffffff;
       }
 
        #workspaces button.active {
