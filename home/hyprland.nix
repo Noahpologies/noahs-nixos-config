@@ -27,6 +27,7 @@
 	"$mod, F, exec, firefox"
 	"$mod, o, exec, obsidian"
 	"$mod, z, exec, zotero"
+	"$mod, r, exec, cheese"
 	
 
 	# general
@@ -39,6 +40,7 @@
         "$mod, P, pseudo"
         "$mod, J, layoutmsg, togglesplit"
 	"$mod, A, fullscreen, 0"
+	"$mod, X, exec, hyprshot -m region"
 
 	# workspaces
         "$mod, 1, workspace, 1"

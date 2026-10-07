@@ -1,12 +1,18 @@
-# X11 fallback, audio, portals, display manager. Hyprland keybinds/animations live in home/hyprland.nix.
+# SDDM stuff, X11 fallback, audio, portals, display manager. Hyprland keybinds/animations live in home/hyprland.nix.
 { config, pkgs, ... }:
 {
   services.xserver.enable = true;
 
   # sddm
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sessionPackages = [ pkgs.hyprland ];
-  services.displayManager.sddm.theme = "catppuccin-mocha-mauve";
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = false;
+    theme = "sddm-astronaut-theme";
+    extraPackages = with pkgs; [ kdePackages.qtmultimedia ];
+  };
+
+  #fix slow login
+  security.pam.services.sddm.fprintAuth = false;
 
   # ENABLE HYPRLAND!
   programs.hyprland = {
@@ -44,12 +50,9 @@
 
   environment.systemPackages = with pkgs; [
     home-manager
-    (catppuccin-sddm.override {
-      flavor = "mocha";
-      font = "JetBrainsMono Nerd Font";
-      fontSize = "9";
-      loginBackground = true;
-    })
+    (sddm-astronaut.override {
+      embeddedTheme = "astronaut";
+      })
   ];
 
   programs.bash.shellAliases = {

@@ -8,8 +8,24 @@
       show = "drun";
     };
     style = ''
-      window { background-color: #1e1e2e; }
-      #input { margin: 5px; }
+      #input {
+        background-color: #1c1c1c;
+        border: 2px solid #bcbcbc;
+        border-radius: 0;
+        color: #bcbcbc;
+    }
+
+    #scroll {
+        background-color: #1c1c1c;
+        border: 2px solid #bcbcbc;
+        border-top-width: 0;
+        color: #6c6c6c;
+    }
+
+    #entry:selected {
+        background-color: #5f87af;
+        color: #bcbcbc;
+    }
     '';
   };
 }

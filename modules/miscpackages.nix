@@ -9,6 +9,7 @@
     gvfs
 
     # random fun stuff
+    easyeffects
     chameleos
     tree
     cowsay

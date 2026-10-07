@@ -99,6 +99,11 @@
     ColorScheme=BreezeDark
   '';
 
+  programs.hyprshot = {
+    enable = true;
+    saveLocation = "$HOME/Pictures/Screenshots";
+  };
+
   programs.bash = {
     enable = true;
 
@@ -107,7 +112,8 @@
    # '';
 
     shellAliases = {
-      remind = "cat ~/reminder.txt | cowsay";
+      todo = "cat ~/reminder.txt | cowsay";
+      todoedit = "nvim ~/reminder.txt";
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#delta";
       rebuild-upgrade = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch --flake /etc/nixos#delta";
     };

@@ -31,9 +31,11 @@
   };
 
   environment.systemPackages = with pkgs; [
+    hyprshot
     fuse
     appimage-run
     ffmpeg
+    zip
     unzip
     jdk17
     pciutils # lspci
