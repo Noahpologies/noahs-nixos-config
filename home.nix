@@ -19,6 +19,7 @@
       mpv
 
       hello
+      hyprsunset
       hyprlock
       polkit_gnome
       networkmanagerapplet
