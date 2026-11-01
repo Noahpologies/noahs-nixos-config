@@ -31,6 +31,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    htop
     hyprshot
     fuse
     appimage-run
